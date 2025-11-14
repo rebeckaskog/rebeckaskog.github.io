@@ -1,0 +1,102 @@
+<!--
+    Author: Rebecka Skog
+    Date: 13-11-2025
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey</title>
+  <script src="index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-emerald-50 text-gray-800 font-sans">
+
+  <header class="bg-emerald-800 text-white p-9">
+    <h1 class="text-3xl font-bold text-center">Registeration page</h1>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <!-- Top row split into two blocks -->
+
+    <div class="grid grid-cols-1 gap-2">
+      <!-- Student info (30%) -->
+      <section class="bg-white p-4 rounded shadow col-span-1">
+        <h2 class="text-2xl font-semibold mb-1 text-emerald-900">Information</h2>
+        <p><span class="text-lg font-medium italic mb-1">Rebecka Skog</span></p>
+        <p><span class="font-medium">NTIS24K</span></p>
+      </section>
+
+      <!-- Controls (70%): add course + day marks -->
+      <section class="bg-white p-4 rounded shadow col-span-2">
+        <h2 class="text-2xl font-semibold text-emerald-900 mb-4">Add Info</h2>
+
+        <form id="FullInfo" novalidate class="space-y-4">
+          <div class="form-row">
+            <label for="FullName" class="block font-medium">Full Name</label>
+            <input id="FullName" name="Name" type="text" required placeholder="e.g., Jane Doe" class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NameError"></p>
+          </div>
+          
+
+          <div class="form-row">
+            <label for="Email" class="block font-medium">E-mail</label>
+            <input id="Email" name="email" type="email" required placeholder="e.g., Jane.Doe@mail.com" class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="EmailError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Tel" class="block font-medium">Phone Number</label>
+            <input id="Tel" name="Tel" type="tel" required placeholder="e.g., +358 123456789" class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NumberError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="BirthDate" class="block font-medium">Birth Date</label>
+            <input id="BirthDate" name="birthdate" type="date" required class="w-full border border-emerald-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="BirthdayError"></p>
+          </div>
+
+          <div class="form-row">
+            <label class="block font-bold mb-1">I accept the terms and conditions</label>
+            <div class="flex gap-4">
+              <label><input id="Terms" type="checkbox" name="Accept" value="Yes">Yes</label>
+              <lable><input id="Terms" type="checkbox" name="Decline" value="No">No</label>
+            </div>
+          <p class="text-red-500 text-sm font-medium" id="TermsError"></p>
+          </div>
+
+          <div class="flex gap-4">
+            <button id="addRowBtn" type="submit" class="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Submit</button>
+            <button id="clearBtn" type="reset" class="bg-emerald-300 text-gray-800 px-4 py-2 rounded hover:bg-emerald-400">Clear</button>
+          </div>
+        </form>
+
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="mt-8 bg-white p-4 rounded shadow overflow-x-auto">
+      <table class="min-w-full table-auto border-collapse">
+        <thead>
+          <tr class="bg-green-100 text-left">
+            <th class="px-4 py-2">Timestamp</th>
+            <th class="px-4 py-2">Name</th>
+            <th class="px-4 py-2">E-mail</th>
+            <th class="px-4 py-2">Phone Number</th>
+            <th class="px-4 py-2">Birth Date</th>
+            <th class="px-4 py-2">Terms</th>
+          </tr>
+        </thead>
+        <tbody id="timetable">
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>
