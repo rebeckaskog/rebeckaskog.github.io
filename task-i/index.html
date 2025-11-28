@@ -1,29 +1,136 @@
 <!--
-    Author: Rebecka Skog
+    Author: Rebecka Skog & Viljami Myllyvirta
     Date: 
   -->
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Instrument Rental</title>
+    <link rel="icon" type="image/x-icon" href="picture_here.jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Instrument Rental ?</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-white">
+  <body class="bg-white min-h-screen flex flex-col">
 
     <header class="bg-orange-50 shadow">
-        <div class="container mx-auto flex items-center px-6">
-            <hi class="text-2xl font-bold text-orange-950">Rent Instruments</hi>
+      <div class="container mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-4xl font-bold font-serif text-orange-950">Rent Instruments</h1>
+      </div>
+      <nav>
+        <div class="container mx-auto flex justify-end items-center px-6 mb-4">
+          <ul class="flex space-x-6">
+            <li><a href="#main" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Home</a></li>
+            <li><a href="#instruments" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Instruments</a></li>
+            <li><a href="#rent" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Rent</a></li>
+          </ul>
         </div>
+      </nav>
     </header>
 
+    <main id="main" class="flex-grow">
+      <section class="h-[70vh] flex items-center justify-center overflow-hidden pt-5">
+        <div class="flex items-center space-x-8 w-full">
+          <img src="images/cello2test.jpeg" class="h-[70vh] w-4/5 object-contain" alt="Cello"/>
 
-    <footer class="bg-orange-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>2025 RentInstruments. All rights reserved.</p>
+          <div class="w-4/5 text-left">
+            <h1 class="text-3xl font-bold font-serif text-orange-950">Play today, return tomorrow!</h1>
+          </div>
+
         </div>
+      </section>
+
+    <section class="bg-orange-50 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-orange-900">Why Choose Us?</h2>
+            <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">We provide affordable rentals, flexible plans, and high-quality instruments for beginners and professionals alike. From practice to performance, the right instrument is always within reach.</p>
+        </div>
+    </section>
+
+    <section id="instruments" class="bg-orange-50 py-16">
+      <h3 class="text-center text-3xl mb-10 font-semibold text-orange-900">Popular Instruments</h3>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <img src="images/violin2.jpg" class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Violin">
+                <p class="mt-3 text-lg">Violin</p>
+              </div>
+
+              <div>
+                <img src="images/Guitar2.jpeg" class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Guitar">
+                <p class="mt-3 text-lg">Guitar</p>
+              </div>
+            
+              <div>
+                <img src="images/cello2.jpg" class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Cello">
+                <p class="mt-3 text-lg">Cello</p>
+              </div>
+            </div>
+        </div>
+        <div class="text-center mt-10">
+          <button class="bg-orange-800 text-white px-8 py-4 rounded-lg font-semibold text-lx shadow hover:bg-orange-600">Show more</button>
+        </div>
+    </section>
+
+     <section class="bg-orange-50 py-16">
+        <div class="container mx-auto px-6">
+        </div>
+    </section>
+
+    <section id="rent" class="bg-orange-50 py-16">
+      <h4 class="text-center text-3xl mb-10 font-semibold text-orange-900">How it works</h4>
+      <div class="container mx-auto px-6 text-center">
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white p-6 shadow rounded-lg">
+                <p class="text-2xl font-semibold text-orange-900 mb-2">Step 1</p>
+                <p class="m-3">Choose your instrument</p>
+            </div>
+
+            <div class="bg-white p-6 shadow rounded-lg">
+                <p class="text-2xl font-semibold text-orange-900 mb-2">Step 2</p>
+                <p class="m-3">Fill in the form</p>
+            </div>
+
+            <div class="bg-white p-6 shadow rounded-lg">
+                <p class="text-2xl font-semibold text-orange-900 mb-2">Step 3</p>
+                <p class="m-3">Take home and enjoy!</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-orange-50 py-16">
+        <div class="container mx-auto px-6">
+        </div>
+    </section>
+
+    <section class="bg-orange-50 py-16">
+        <div class="container mx-auto px-6">
+            <h5 class="text-3xl font-semibold text-orange-900 mb-6 text-center">Contact Us</h5>
+            <div class="flex items-center gap-10 text-lg text-gray-700">
+              <p><strong class="text-orange-900">Phone:</strong> +358 50 123 4567</p>
+              <p><strong class="text-orange-900">Email:</strong> rent@instruments.com</p>
+              <p><strong class="text-orange-900">Address:</strong> Rantakatu 5, Kokkola, Finland</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+
+    <footer class="bg-orange-800 text-white py-6 mt-auto">
+      <div class="container mx-auto text-center">
+        <p>2025 Rent Instruments. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
+</html>
