@@ -1,0 +1,170 @@
+<!--
+    Author: Rebecka Skog & Viljami Myllyvirta
+    Date: 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Instrument Rental</title>
+  <link rel="icon" type="image/x-icon" href="picture_here.jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+
+  <header class="bg-orange-50 shadow relative z-20">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-4xl font-bold font-serif text-orange-950">Rent Instruments</h1>
+    </div>
+    <nav>
+      <div class="container mx-auto flex justify-end items-center px-6 mb-4">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Home</a></li>
+          <li><a href="catalogue.html"
+              class="text-orange-950 font-semibold text-xl hover:text-orange-600">Instruments</a></li>
+          <li><a href="rent.html" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Rent</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-grow">
+    <section class="relative isolate min-h-[70vh] flex items-center justify-center px-4">
+
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-black/15"></div>
+        <img src="images/cello2test.jpeg" class="h-[70vh] w-4/5 object-contain items-center" alt="Cello" />
+      </div>
+
+      <div class="bg-black/30 backdrop-blur-md p-8 rounded-2xl max-w-4xl mx-auto">
+        <p class="text-center font-serif text-orange-100 font-medium text-2xl drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
+          Getting started is simple and affordable: just choose the instrument that inspires you from our wide selection, fill out a quick rental form, and take it home to enjoy making music right away. Whether you're a beginner, a student, or a performer, we make it easy to access high-quality instruments without the upfront cost so you can focus on playing, practicing, and performing.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="form" class="bg-orange-50 py-16">
+      <h1 class="text-center text-3xl mb-10 font-semibold text-orange-900">Fill in the form</h1>
+      <div class="bg-orange-50 p-9 rounded-lg max-w-lg mx-auto">
+
+        <form id="FullInfo" novalidate class="space-y-6">
+
+          <div>
+            <label for="instruments" class="block font-medium text-orange-900 mb-1 text-lg">Choose instrument</label>
+            <select name="instruments" id="instruments"
+              class="appearance-none w-full border border-orange-300 rounded px-3 py-2 text-gray-500">
+              <option value=" ">-- Select Instrument --</option>
+              <option value="guitar">Guitar</option>
+              <option value="electric guitar">Electric Guitar</option>
+              <option value="violin">Violin</option>
+              <option value="Cello">Cello</option>
+              <option value="Tuba">Tuba</option>
+              <option value="Cello">Trumpet</option>
+              <option value="Cello">Clarinet</option>
+              <option value="Cello">Piano Keyboard</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="rentalPeriod" class="block font-medium text-orange-900 mb-1 text-lg">Rental Start Date</label>
+            <input id="rentalStart" name="startDate" type="date" required
+              class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="RentalstartError"></p>
+          </div>
+
+          <div>
+            <label for="weeks" class="block font-medium text-orange-900 mb-1 text-lg">Rental Duration (Weeks)</label>
+            <input id="weeks" name="weeks" type="number" required placeholder="e.g., 4"
+              class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="WeeksError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="FullName" class="block font-medium text-orange-900 mb-1 text-lg">Full Name</label>
+            <input id="FullName" name="Name" type="text" required placeholder="e.g., Jane Doe"
+              class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NameError"></p>
+          </div>
+
+
+          <div class="form-row">
+            <label for="Email" class="block font-medium text-orange-900 mb-1 text-lg">E-mail</label>
+            <input id="Email" name="email" type="email" required placeholder="e.g., Jane.Doe@mail.com"
+              class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="EmailError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Tel" class="block font-medium text-orange-900 mb-1 text-lg">Phone Number</label>
+            <input id="Tel" name="Tel" type="tel" required placeholder="e.g., +358 123456789"
+              class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="NumberError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Address" class="block font-medium text-orange-900 mb-1 text-lg">Address</label>
+            <input id="Address" name="Address" type="text" required placeholder="e.g., Music Road 1"
+              class="w-full border border-orange-300 rounded px-3 py-2">
+            <p class="text-red-500 text-sm font-medium" id="AddressError"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="Free_Text" class="block font-medium text-orange-900 mb-1 text-lg">Text (Optional)</label>
+            <textarea id="Free_Text" name="Free_Text" rows="4"
+              class="w-full border border-orange-300 rounded px-3 py-2"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label class="block font-medium text-orange-900 mb-1 text-lg">I accept the terms and conditions</label>
+            <div class="flex justify-center gap-8">
+              <label>
+                <input id="Terms" type="checkbox" name="Accept" value="Yes" class="w-5 h-5 accent-orange-600 rounded">
+                <span class="ml-2 text-orange-900 text-lg">Yes</span>
+              </label>
+              <label>
+                <input id="Terms2" type="checkbox" name="Accept" value="No" class="w-5 h-5 accent-orange-600 rounded">
+                <span class="ml-2 text-orange-900 text-lg">No</span>
+              </label>
+            </div>
+            <p class="text-red-500 text-sm font-medium" id="TermsError"></p>
+          </div>
+
+          <div class="flex gap-4 justify-center ">
+            <button id="submit" type="submit"
+              class="bg-orange-800 text-white px-6 py-3 rounded hover:bg-orange-600">Submit</button>
+            <button id="clearBtn" type="reset"
+              class="bg-orange-300 text-gray-800 px-6 py-3 rounded hover:bg-orange-400">Clear</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+    <section class="bg-orange-50 py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-orange-900 mb-6 text-center">Contact Us</h2>
+        <div class="flex items-center gap-10 text-lg text-gray-700">
+          <p><strong class="text-orange-900">Phone:</strong> +358 50 123 4567</p>
+          <p><strong class="text-orange-900">Email:</strong> rent@instruments.com</p>
+          <p><strong class="text-orange-900">Address:</strong> Rantakatu 5, Kokkola, Finland</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-orange-800 text-white py-6 mt-auto">
+    <div class="container mx-auto text-center">
+      <p>2025 Rent Instruments. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
