@@ -1,3 +1,6 @@
+// Author: Rebecka Skog & Viljami Myllyvirta
+// Date: 10-12-2025
+
 document.getElementById("FullInfo").addEventListener("submit", function (e) {
   let valid = true;
 
