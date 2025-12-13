@@ -1,0 +1,161 @@
+<!--
+    Author: Rebecka Skog & Viljami Myllyvirta
+    Date: 10-12-2025
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Instrument Rental</title>
+  <link rel="icon" type="image/x-icon" href="picture_here.jpeg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+
+  <header class="bg-orange-50 shadow">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-4xl font-bold font-serif text-orange-950">Rent Instruments</h1>
+    </div>
+    <nav>
+      <div class="container mx-auto flex justify-end items-center px-6 mb-4">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Home</a></li>
+          <li><a href="catalogue.html"
+              class="text-orange-950 font-semibold text-xl hover:text-orange-600">Instruments</a></li>
+          <li><a href="rent.html" class="text-orange-950 font-semibold text-xl hover:text-orange-600">Rent</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="flex-grow">
+    <section class="relative isolate min-h-[500px]">
+      <h2 class="visability: hidden">video</h2>
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <video class="w-full h-full object-cover object-center" preload="metadata" autoplay muted loop playsinline
+          poster="images/hero-fallback.jpg">
+          <source src="images/guitarhero_fixed.mp4" type="video/mp4">
+          <source src="images/guitarhero_fixed.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section class="bg-orange-50 py-16">
+      <h3 class="visability: hidden">nothing</h3>
+      <div class="container mx-auto px-6 visability: hidden">
+      </div>
+    </section>
+
+    <section id="instruments" class="bg-orange-50 py-16">
+      <h3 class="text-center text-3xl mb-10 font-semibold text-orange-900">Instruments</h3>
+      <div class="container mx-auto px-6 m-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <img loading="lazy" src="images/violin2.jpg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Violin">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Violin</h4>
+            <p class="mt-3 text-lg">Elegant and versatile, the violin is perfect for beginners and advanced players
+              alike.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">15€ / Week </p>
+          </div>
+
+          <div>
+            <img loading="lazy" src="images/Guitar2.jpeg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Guitar">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Guitar</h4>
+            <p class="mt-3 text-lg">From campfire sing-alongs to stage performances, the acoustic guitar is a timeless
+              choice.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">15€ / Week </p>
+          </div>
+
+          <div>
+            <img loading="lazy" src="images/cello2.jpg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Cello">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Cello</h4>
+            <p class="mt-3 text-lg">Rich and soulful, the cello adds depth to any ensemble.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">18€ / Week </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 m-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <img loading="lazy" src="images/keyboard.jpeg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Keyboard">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Piano Keyboard</h4>
+            <p class="mt-3 text-lg">Portable and beginner-friendly, a keyboard rental offers the joy of piano playing
+              without the bulk.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">20€ / Week </p>
+          </div>
+
+          <div>
+            <img loading="lazy" src="images/electric_guitar.jpeg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Electric Guitar">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Electric Guitar</h4>
+            <p class="mt-3 text-lg">Unleash your inner rock star with an electric guitar rental.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">20€ / Week </p>
+          </div>
+
+          <div>
+            <img loading="lazy" src="images/trumpet.jpg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Trumpet">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Trumpet</h4>
+            <p class="mt-3 text-lg">Bright and bold, the trumpet shines in jazz, classical, and marching bands.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">20€ / Week </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 m-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+          <div>
+            <img loading="lazy" src="images/clarinet.jpeg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Clarinet">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Clarinet</h4>
+            <p class="mt-3 text-lg">Smooth and expressive, the clarinet is a favorite in orchestras, jazz bands, and
+              solo performances.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">17€ / Week </p>
+          </div>
+
+          <div>
+            <img loading="lazy" src="images/tuba.jpg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Tuba">
+            <h4 class="mt-3 text-2xl font-semibold text-orange-950">Tuba</h4>
+            <p class="mt-3 text-lg">The foundation of any brass ensemble, the tuba delivers deep, resonant tones.</p>
+            <p class="mt-3 text-lg text-orange-600 font-semibold">30€ / Week </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-orange-50 py-16">
+      <h5 class="visability: hidden">nothing</h5>
+      <div class="container mx-auto px-6 visability: hidden">
+      </div>
+    </section>
+
+    <section class="bg-orange-50 py-16">
+      <h6 class="visability: hidden">nothing</h6>
+      <div class="container mx-auto px-6 visability: hidden">
+        <img loading="lazy" src="images/example.jpg"
+              class="w-64 h-64 mx-auto object-contain rounded-lg shadow bg-white" alt="Sunset">
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-orange-800 text-white py-6 mt-auto">
+    <div class="container mx-auto text-center">
+      <p>2025 Rent Instruments. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
