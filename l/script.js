@@ -1,41 +1,35 @@
 // Author: Rebecka Skog & Viljami Myllyvirta
-// Date: 
+// Date: 15-12-2025
 
 document.getElementById("FullInfo").addEventListener("submit", function (e) {
   let valid = true;
 
-  // Clear previous errors
   document.querySelectorAll("p.text-red-500").forEach(p => p.textContent = "");
 
-  // Instrument validation
   const instrument = document.getElementById("instruments").value.trim();
   if (instrument === "") {
     document.getElementById("InstrumentError").textContent = "Please select an instrument.";
     valid = false;
   }
 
-  // Start date validation
   const startDate = document.getElementById("rentalStart").value;
   if (!startDate) {
     document.getElementById("RentalstartError").textContent = "Please enter a rental start date.";
     valid = false;
   }
 
-  // Weeks validation
   const weeks = document.getElementById("weeks").value;
   if (weeks === "" || weeks <= 0) {
     document.getElementById("WeeksError").textContent = "Please enter a valid number of weeks.";
     valid = false;
   }
 
-  // Name validation
   const name = document.getElementById("FullName").value.trim();
   if (name.length < 2) {
     document.getElementById("NameError").textContent = "Please enter your full name.";
     valid = false;
   }
 
-  // Email validation
   const email = document.getElementById("Email").value.trim();
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
@@ -43,21 +37,18 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
     valid = false;
   }
 
-  // Address validation
   const address = document.getElementById("Address").value.trim();
   if (address.length < 3) {
     document.getElementById("AddressError").textContent = "Please enter your address.";
     valid = false;
   }
 
-  // Phone number validation
   const Phone_number = document.getElementById("Tel").value.trim();
   if (Phone_number.length < 5 || Phone_number.length > 15) {
     document.getElementById("NumberError").textContent = "Please enter a valid phone number.";
     valid = false;
   }
 
-  // Terms validation
   const termsAccepted = document.getElementById("Terms").checked;
   if (!termsAccepted) {
     document.getElementById("TermsError").textContent = "You must accept the terms and conditions.";
@@ -68,7 +59,6 @@ document.getElementById("FullInfo").addEventListener("submit", function (e) {
 });
 
 
-// Realtime validation
 function addRealtime(id, errorId, validator) {
   var el = document.getElementById(id);
   if (!el) return;
